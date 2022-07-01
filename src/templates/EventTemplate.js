@@ -78,8 +78,8 @@ export const query = graphql`
         website
         twitter
         instagram
-        startDate
-        endDate
+        startDate(formatString: "LL")
+        endDate(formatString: "LL")
         country
       }
     }

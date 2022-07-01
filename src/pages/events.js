@@ -25,9 +25,7 @@ export default function EventsListingPage({ data }) {
               <>
                 <CardListItem cardListItemKey={`list-item-${event.node.id}`}>
                   <Card
-                    cardTitle={
-                      event.node.frontmatter ? event.node.frontmatter.title : ''
-                    }
+                    cardTitle={`${event.node.frontmatter.title} - ${event.node.frontmatter.startDate}`}
                     cardPath={`/events/${event.node.id}`}
                   />
                 </CardListItem>
@@ -43,13 +41,14 @@ export default function EventsListingPage({ data }) {
 export const eventsQuery = graphql`
   query eventsListingQuery {
     events: allMarkdownRemark(
-      sort: { fields: frontmatter___title, order: DESC }
+      sort: { fields: frontmatter___startDate, order: ASC }
     ) {
       edges {
         node {
           id
           frontmatter {
             title
+            startDate(formatString: "LL")
           }
         }
       }
