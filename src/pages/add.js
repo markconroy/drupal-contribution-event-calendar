@@ -45,6 +45,12 @@ export default function AddPage() {
               <code>Dublin Drupal Contribution Day</code>)
             </li>
             <li>
+              <code>startDate</code> (e.g. <code>2022-07-01</code>)
+            </li>
+            <li>
+              <code>endDate</code> (e.g. <code>2022-07-01</code>)
+            </li>
+            <li>
               <code>website</code> (address of your website, e.g.{' '}
               <code>https://mark.ie/blog</code>)
             </li>
