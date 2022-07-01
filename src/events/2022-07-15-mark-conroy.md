@@ -1,5 +1,5 @@
 ---
-title: Event 1
+title: Mark Conroy Drupal event
 website: https://mark.ie/blog
 twitter: markconroy
 instagram: markyconroy

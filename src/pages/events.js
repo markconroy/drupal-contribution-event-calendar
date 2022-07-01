@@ -17,9 +17,7 @@ export default function EventsListingPage({ data }) {
     <>
       <GlobalStyles />
       <Layout>
-        <SEO
-          title="Developer events Images and Descriptions"
-        />
+        <SEO title="Developer events Images and Descriptions" />
         <div className="layout-contained layout-contained--large padding-horizontal">
           <h1>events</h1>
           <CardListContainer>

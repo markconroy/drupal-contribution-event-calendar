@@ -28,7 +28,7 @@ export default function MenuItems() {
         <Link
           className="menu-link"
           activeClassName="menu-link--active"
-          to="/submit-event"
+          to="/add"
           partiallyActive
         >
           Submit Event

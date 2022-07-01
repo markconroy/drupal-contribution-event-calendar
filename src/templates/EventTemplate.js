@@ -23,14 +23,20 @@ export default function SinglePage({ data }) {
     <>
       <Layout>
         <SEO
-          title={`${title}'s Developer Workspace`}
-          description={`View ${title}'s Developer Workspace, and get inspiration for your own`}
+          title={`${title}`}
+          description={`${event.frontmatter.title} is on in ${event.frontmatter.country}, starting ${event.frontmatter.startDate}`}
         />
         <div className="layout-contained layout-contained--large padding-horizontal">
           <ArticleStyles>
-            <h1>{`${event.frontmatter.title}'s Workspace`}</h1>
-           
-            <div dangerouslySetInnerHTML={{__html: event.html}} />
+            <h1>{event.frontmatter.title}</h1>
+
+            <ul>
+              <li>Starts: {event.frontmatter.startDate}</li>
+              <li>Ends: {event.frontmatter.endDate}</li>
+              <li>Country: {event.frontmatter.country}</li>
+            </ul>
+
+            <div dangerouslySetInnerHTML={{ __html: event.html }} />
 
             {website || twitter || instagram ? (
               <>
@@ -72,6 +78,9 @@ export const query = graphql`
         website
         twitter
         instagram
+        startDate
+        endDate
+        country
       }
     }
     site {
